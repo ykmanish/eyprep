@@ -11,11 +11,13 @@ import Practice from "./Practice";
 import Flashcards from "./Flashcards";
 import InterviewLab from "./InterviewLab";
 import ResumeDrill from "./ResumeDrill";
+import RealRounds from "./RealRounds";
 import JDDecoder from "./JDDecoder";
 import Toolkit from "./Toolkit";
 
 export const NAV = [
   { id: "home", label: "Mission control", short: "Home", icon: "🏠" },
+  { id: "rounds", label: "The real rounds", short: "Rounds", icon: "🔥" },
   { id: "learn", label: "Study modules", short: "Study", icon: "📘" },
   { id: "practice", label: "Practice questions", short: "Practice", icon: "🎯" },
   { id: "cards", label: "Flashcards", short: "Cards", icon: "🃏" },
@@ -71,6 +73,7 @@ function Shell() {
     learn: <Learn go={go} arg={route.arg} />,
     practice: <Practice go={go} arg={route.arg} />,
     cards: <Flashcards />,
+    rounds: <RealRounds go={go} arg={route.arg} />,
     resume: <ResumeDrill go={go} arg={route.arg} />,
     lab: <InterviewLab arg={route.arg} />,
     jd: <JDDecoder go={go} />,

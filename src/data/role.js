@@ -15,7 +15,7 @@ export const ROLE = {
   stats: [
     { value: "11", label: "service domains from the JD", tone: "blue" },
     { value: "10", label: "parts, fundamentals to checklist", tone: "red" },
-    { value: "319", label: "practice questions with answers", tone: "yellow" },
+    { value: "355", label: "practice questions with answers", tone: "yellow" },
     { value: "4", label: "rounds you have to clear", tone: "green" },
   ],
 };

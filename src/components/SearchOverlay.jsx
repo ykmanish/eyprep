@@ -6,6 +6,7 @@ import { QUESTIONS, DOMAIN_BY_ID } from "@/data/questions";
 import { ACRONYMS, FLASHCARD_GROUPS } from "@/data/reference";
 import { SCENARIOS, HR_QUESTIONS } from "@/data/interview";
 import { RESUME_PROBES, DEEP_DIVES } from "@/data/resume";
+import { ROUNDS } from "@/data/actualRounds";
 import { tone } from "./ui";
 
 const INDEX = [
@@ -85,6 +86,17 @@ const INDEX = [
       sub: d.title,
       view: "resume",
       arg: "deep",
+    }))
+  ),
+  ...ROUNDS.flatMap((r) =>
+    r.questions.map((q) => ({
+      kind: "Asked in round",
+      icon: "🔥",
+      t: q.tone,
+      title: q.topic,
+      sub: `${r.n}: ${q.verbatim}`,
+      view: "rounds",
+      arg: r.id,
     }))
   ),
 ];

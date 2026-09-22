@@ -106,6 +106,59 @@ export default function Home({ go }) {
         </div>
       </section>
 
+      {/* ------------------------ The real paper ------------------------ */}
+      <section className="relative overflow-hidden rounded-[28px] border border-[var(--g-red-100)] bg-[var(--g-red-50)]">
+        <div className="relative grid gap-6 p-6 sm:p-9 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:items-center">
+          <div>
+            <div className="flex flex-wrap items-center gap-2">
+              <Tag t="red">🔥 Reported from a real interview</Tag>
+            </div>
+            <h2 className="mt-3 text-[26px] font-semibold leading-tight tracking-tight text-[var(--g-red-700)] sm:text-[30px]">
+              You have the actual questions.
+            </h2>
+            <p className="mt-3 max-w-xl text-[14.5px] leading-relaxed text-[var(--g-red-700)] opacity-90 text-pretty">
+              Sixteen questions across two rounds, passed on by a senior who sat them. Everything
+              else here is a prediction. Start from this, then fill the gaps.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button
+                onClick={() => go("rounds", "r1")}
+                className="bg-[var(--g-red-600)] hover:brightness-110"
+              >
+                See both rounds
+              </Button>
+              <Button variant="outlined" onClick={() => go("practice", "rounds")}>
+                Drill the 36 topic questions
+              </Button>
+            </div>
+          </div>
+
+          <div className="rounded-2xl bg-[var(--surface)] p-5 g-elev-1">
+            <div className="text-[11px] font-bold uppercase tracking-[0.12em] text-[var(--text-faint)]">
+              The one number that matters
+            </div>
+            <div className="mt-2 flex items-baseline gap-2">
+              <span className="text-[42px] font-semibold leading-none text-[var(--g-red-600)]">
+                12
+              </span>
+              <span className="text-[15px] text-[var(--text-muted)]">of 16 questions</span>
+            </div>
+            <p className="mt-2 text-[13.5px] leading-relaxed text-[var(--text-muted)]">
+              come straight off your resume. Five to six in round one, five to six again in round
+              two, plus a separate internship block. Nothing else comes close.
+            </p>
+            <Button
+              size="sm"
+              variant="tonal"
+              className="mt-4"
+              onClick={() => go("resume", "probes")}
+            >
+              Open the resume drill
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* --------------------------- Your progress --------------------------- */}
       <section>
         <SectionTitle

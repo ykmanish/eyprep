@@ -1,6 +1,7 @@
 import { CORE_QUESTIONS } from "./questionsCore";
 import { CYBER_QUESTIONS } from "./questionsCyber";
 import { RESUME_QUESTIONS } from "./questionsResume";
+import { ROUNDS_QUESTIONS } from "./questionsRounds";
 import { APTITUDE_QUESTIONS } from "./aptitude";
 
 export const DOMAINS = [
@@ -113,12 +114,23 @@ export const DOMAINS = [
     blurb:
       "Drawn from exactly what your page claims: ISO 27001:2022, ISO 20000 and ITIL 4, PinkVERIFY, CAPA, working papers, Wireshark, Nmap, malware analysis.",
   },
+  {
+    id: "rounds",
+    label: "Reported Round Topics",
+    short: "Real Rounds",
+    icon: "🎤",
+    tone: "purple",
+    ref: "Real paper",
+    blurb:
+      "Built from what was actually asked: the VAPT lifecycle, Windows forensic artefacts, threat intelligence, SOX and SOC, cryptocurrency and the OWASP categories.",
+  },
 ];
 
 export const QUESTIONS = [
   ...CORE_QUESTIONS,
   ...CYBER_QUESTIONS,
   ...RESUME_QUESTIONS,
+  ...ROUNDS_QUESTIONS,
   ...APTITUDE_QUESTIONS,
 ];
 
